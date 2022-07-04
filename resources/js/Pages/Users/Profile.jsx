@@ -5,7 +5,7 @@ import Base from '../../Layouts/Base'
 export default function Profile(props) {
     const { auth } = usePage().props;
 
-    const {data, setData, put, reset, errors} = useForm({ name: auth.user.name, email: auth.user.email, username: auth.user.username, address: auth.user.address, });
+    const {data, setData, put, reset, errors} = useForm({ name: auth.user.name, email: auth.user.email, username: auth.user.username, address: auth.user.address,house_number:auth.user.house_number,rent:auth.user.rent });
 
     const onChange = (e) => setData({ ...data, [e.target.id]: e.target.value });
 

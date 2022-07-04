@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CreateUser({close}) {
 
-    const {data, setData, post, reset, errors} = useForm({ name: '', email: '', username: '', address: '', password: '', });
+    const {data, setData, post, reset, errors} = useForm({ name: '', email: '', username: '', address: '', password: '',rent: '',house_number: '' });
 
     const onChange = (e) => setData({ ...data, [e.target.id]: e.target.value });
 
@@ -36,6 +36,16 @@ export default function CreateUser({close}) {
                             <label htmlFor="email" className="col-form-label">Email:</label>
                             <input type="email" className="form-control" name='email' value={data.email} onChange={onChange} id="email"/>
                             {errors && <div className='text-danger mt-1'>{errors.email}</div>}
+                    </div>
+                     <div className="form-group">
+                            <label htmlFor="house_number" className="col-form-label">House Number:</label>
+                            <input type="text" className="form-control" name='house_number' value={data.house_number} onChange={onChange} id="house_number"/>
+                            {errors && <div className='text-danger mt-1'>{errors.house_number}</div>}
+                    </div>
+                     <div className="form-group">
+                            <label htmlFor="rent" className="col-form-label">Rent:</label>
+                            <input type="number" className="form-control" name='rent' value={data.rent} onChange={onChange} id="rent"/>
+                            {errors && <div className='text-danger mt-1'>{errors.rent}</div>}
                         </div>
                         <div className="form-group">
                             <label htmlFor="address" className="col-form-label">Address:</label>
@@ -49,8 +59,8 @@ export default function CreateUser({close}) {
                         </div>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" className="btn bg-gradient-primary">Save</button>
+                    <button type="button" className="btn bg-secondary text-light" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" className="btn bg-primary text-light">Save</button>
                 </div>
             </form>
         </>

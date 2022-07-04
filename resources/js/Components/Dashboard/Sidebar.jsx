@@ -28,7 +28,7 @@ export default function Sidebar() {
                     <li className="nav-item">
                         <Link className={`${route().current('profile') && 'active'} nav-link`} href={route('profile')}>
                             <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                <i className="ni ni-single-02 text-dark text-sm opacity-10" />
+                                <i className="ni ni-single-02 text-primary text-sm opacity-10" />
                             </div>
                             <span className="nav-link-text ms-1">Profile</span>
                         </Link>
@@ -39,9 +39,17 @@ export default function Sidebar() {
                     <li className="nav-item">
                         <Link className={`${route().current('users.*') && 'active'} nav-link`} href={route('users.index')}>
                             <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                <i className="fas fa-user-lock text-warning text-sm opacity-10" />
+                                <i className="fas fa-user-lock text-info text-sm opacity-10" />
                             </div>
                             <span className="nav-link-text ms-1">Users</span>
+                        </Link>
+                    </li>
+                      <li className="nav-item">
+                        <Link className={`${route().current('complain ') && 'active'} nav-link`} href={route('users.index')}>
+                            <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i className="fas fa-hand-sparkles text-success text-sm opacity-10" />
+                            </div>
+                            <span className="nav-link-text ms-1">Raise Complain</span>
                         </Link>
                     </li>
                     <li className="nav-item">

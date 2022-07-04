@@ -28,7 +28,7 @@ class LoginController extends Controller
         }
 
         throw ValidationException::withMessages([
-            'email' => 'The provide credentials does not match our record.',
+            'email' => 'Invalid credentials.',
         ]);
     }
 
@@ -36,7 +36,7 @@ class LoginController extends Controller
         Auth::logout();
 
         return redirect('/login')->with([
-            'type' => 'success', 'message' => 'You are now logout.',
+            'type' => 'success', 'message' => 'Logged out.',
         ]);
     }
 }

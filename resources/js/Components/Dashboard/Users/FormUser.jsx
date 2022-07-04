@@ -21,6 +21,16 @@ export default function FormUser({errors, submit, data, setData}) {
                     <input type="email" className="form-control" name='email' value={data.email} onChange={onChange} id="email"/>
                     {errors && <div className='text-danger mt-1'>{errors.email}</div>}
                 </div>
+                 <div className="form-group">
+                    <label htmlFor="house_number" className="col-form-label">House Number:</label>
+                    <input type="text" className="form-control" name='house_number' value={data.house_number} onChange={onChange} id="house_number"/>
+                    {errors && <div className='text-danger mt-1'>{errors.house_number}</div>}
+                </div>
+                 <div className="form-group">
+                    <label htmlFor="rent" className="col-form-label">Rent:</label>
+                    <input type="number" className="form-control" name='rent' value={data.rent} onChange={onChange} id="rent"/>
+                    {errors && <div className='text-danger mt-1'>{errors.rent}</div>}
+                </div>
                 <div className="form-group">
                     <label htmlFor="address" className="col-form-label">Address:</label>
                     <input type="text" className="form-control" name='address' value={`${data.address || ''}`} onChange={onChange} id="address"/>

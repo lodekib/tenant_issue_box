@@ -30,7 +30,7 @@ class RegisterController extends Controller
     
             return redirect('/dashboard')->with([
                 'type' => 'success',
-                'message' => 'You are logged in.'
+                'message' => 'Logged in.'
             ]);
         }
 

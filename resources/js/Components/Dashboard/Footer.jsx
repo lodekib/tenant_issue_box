@@ -9,7 +9,6 @@ export default function Footer() {
                         <div className="col-lg-6 mb-lg-0 mb-4">
                         <div className="copyright text-center text-sm text-muted text-lg-start">
                             Copyright © 2022 ,
-                            made with <i className="fa fa-heart" /> by
                             <a href="#" className="font-weight-bold"> Zainab </a>
                         
                         </div>

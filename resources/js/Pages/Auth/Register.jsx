@@ -24,7 +24,6 @@ export default function Register({ errors }) {
                         <div className="row justify-content-center">
                         <div className="col-lg-5 text-center mx-auto">
                             <h1 className="text-white mb-2 mt-5">Welcome!</h1>
-                            <p className="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>
                         </div>
                         </div>
                     </div>
@@ -92,50 +91,11 @@ export default function Register({ errors }) {
                     </div>
                 </main>
                 <footer className="footer py-5">
-                    <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8 mb-4 mx-auto text-center">
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            Company
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            About Us
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            Team
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            Products
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            Blog
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                            Pricing
-                        </a>
-                        </div>
-                        <div className="col-lg-8 mx-auto text-center mb-4 mt-2">
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-4 me-4">
-                            <span className="text-lg fab fa-dribbble" />
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-4 me-4">
-                            <span className="text-lg fab fa-twitter" />
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-4 me-4">
-                            <span className="text-lg fab fa-instagram" />
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-4 me-4">
-                            <span className="text-lg fab fa-pinterest" />
-                        </a>
-                        <a href="javascript:;" target="_blank" className="text-secondary me-xl-4 me-4">
-                            <span className="text-lg fab fa-github" />
-                        </a>
-                        </div>
-                    </div>
+                    <div className="container"> 
                     <div className="row">
                         <div className="col-8 mx-auto text-center mt-1">
                         <p className="mb-0 text-secondary">
-                            Copyright ©  Soft by Creative Tim.
+                            Copyright © 2022 Zainab.
                         </p>
                         </div>
                     </div>
