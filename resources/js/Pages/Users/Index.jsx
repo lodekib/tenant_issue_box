@@ -55,11 +55,11 @@ export default function Index(props) {
                             <div className="card-header pb-0">
                             <div className="row">
                                 <div className="col-md-6">
-                                    <h6>Users table</h6>
+                                    <h6>Tenants</h6>
                                 </div>
                                 <div className="col-md-6 d-flex justify-content-end">
                                     <button onClick={addDialogHandler} type="button" className="btn bg-gradient-success btn-block mb-3" data-bs-toggle="modal" data-bs-target="#exampleModalMessage">
-                                        Create New User
+                                        New Tenant
                                     </button>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ export default function Index(props) {
                                 <table className="table align-items-center justify-content-center mb-0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-centter">#</th>
+                                            <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-left">Id</th>
                                             <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-left">Name</th>
                                             <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-left">Username</th>
                                             <th className="text-uppercase text-secondary text-xxs font-weight-bolder text-left opacity-7 ps-2">Email</th>
@@ -80,36 +80,33 @@ export default function Index(props) {
                                     <tbody>
                                         {users.map((user, index) => (
                                             <tr key={user.id}>
-                                                <td className='text-center'>{meta.from + index}</td>
+                                                <td className='text-center'><small>{meta.from + index}</small></td>
                                                 <td className='text-left'>
                                                     <div className="d-flex px-2">
-                                                        <div>
-                                                            <img src="/img/team-2.jpg" className="avatar avatar-sm  me-3 " />
-                                                        </div>
                                                         <div className="my-auto">
-                                                            <h6 className="mb-0 text-sm">{user.name}</h6>
+                                                            <h6 className="mb-0 text-sm"><small>{user.name}</small></h6>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td className='text-left'>
-                                                    <p className="text-sm font-weight-bold mb-0">{user.username}</p>
+                                                    <p className="text-sm font-weight-bold mb-0"><small>{user.username}</small></p>
                                                 </td>
                                                 <td className='text-left'>
-                                                    <span className="text-xs font-weight-bold">{user.email}</span>
+                                                    <span className="text-xs font-weight-bold"><small>{user.email}</small></span>
                                                 </td>
                                                 <td className="align-middle text-left">
                                                     <div className="d-flex align-items-center text-left">
-                                                        <span className="text-xs font-weight-bold mb-0">{user.address}</span>
+                                                        <span className="text-xs font-weight-bold mb-0"><small>{user.address}</small></span>
                                                     </div>
                                                 </td>
                                                 <td className="align-middle text-center" width="10%">
-                                                <div>
-                                                    <button type="button" onClick={() => openUpdateDialog(user)} className="btn btn-vimeo btn-icon-only mx-2">
+                                                <div><small>                                                    <button type="button" onClick={() => openUpdateDialog(user)} className="btn btn-vimeo btn-icon-only mx-2">
                                                         <span className="btn-inner--icon"><i className="fas fa-pencil-alt"></i></span>
                                                     </button>
                                                     <button type="button" onClick={() => openDestroyDialog(user)} className="btn btn-youtube btn-icon-only">
                                                         <span className="btn-inner--icon"><i className="fas fa-trash"></i></span>
-                                                    </button>
+                                                        </button>
+                                                        </small>
                                                 </div>
                                                 </td>
                                             </tr>

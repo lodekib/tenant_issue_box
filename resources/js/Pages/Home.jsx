@@ -1,11 +1,17 @@
 import React from 'react'
+import Guest from '../Layouts/Guest'
+
 export default function Home() {
   return (
     <>
-      tests
-      </>
-      
-  );
+        <div className='container'>
+          <div className="card">
+            <div className="card-body">
+            </div>
+          </div>
+        </div>
+    </>
+  )
 }
 
- Home.layout = (page) => <Guest children={page} title={"Home"}/>
+Home.layout = (page) => <Guest children={page} title={"Home"}/>

@@ -22,7 +22,7 @@ export default function Login({ errors }) {
                             <div className="card card-plain">
                                 <div className="card z-index-0">
                                     <div className="card-header text-center pt-4">
-                                        <h5>Register with</h5>
+                                        <h5>Sign in</h5>
                                         </div>
                                         <div className="row px-xl-5 px-sm-4 px-3 d-flex justify-content-center">
                                             <div className="col-12 px-1 inline-block">
@@ -59,7 +59,7 @@ export default function Login({ errors }) {
 
                                             </div>
                                             <div className="form-check form-switch">
-                                                <input  value={data.remember} onChange={(e) => setData({...values, remember: e.target.checked})} name='remember' id='remember' className="form-check-input" type="checkbox" id="rememberMe" />
+                                                <input  value={data.remember} onChange={(e) => setData({...values, remember: e.target.checked})} name='remember' id='remember' className="form-check-input" type="checkbox" />
                                                 <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
                                             </div>
                                             <div className="text-center">
@@ -78,9 +78,9 @@ export default function Login({ errors }) {
                         </div>
                         <div className="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
                         <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style={{backgroundImage: 'url("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg")', backgroundSize: 'cover'}}>
-                            <span className="mask bg-gradient-primary opacity-6" />
-                            <h4 className="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
-                            <p className="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                            <span className="mask bg-gradient-primary opacity-7" />
+                            <h4 className="mt-5 text-white font-weight-bolder position-relative">TenantCare</h4>
+                            <p className="text-white position-relative">Coonect with your Landlord</p>
                         </div>
                         </div>
                     </div>
