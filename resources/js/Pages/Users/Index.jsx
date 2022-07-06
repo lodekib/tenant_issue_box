@@ -33,19 +33,19 @@ export default function Index(props) {
     return (
         <>
             <div className="container-fluid py-4">
-                <Dialog trigger={addTrigger} title="Create New User">
+                <Dialog trigger={addTrigger} title="Create New Tenant">
                     <CreateUser close={addCloseTrigger} />
                 </Dialog>
 
-                <Dialog trigger={UpdateTrigger} title={`Update User: ${state.name}`}>
+                <Dialog trigger={UpdateTrigger} title={`Update Tenant: ${state.name}`}>
                     <EditUser model={state} close={UpdateCloseTrigger} />
                 </Dialog>
 
-                <Dialog trigger={destroyTrigger} title={`Delete User: ${state.name}`}>
+                <Dialog trigger={destroyTrigger} title={`Delete Tenant: ${state.name}`}>
                     <p>Are you sure to you want to delete this tenant ?</p>
                     <div className="modal-footer">
-                        <button type="button" className="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" onClick={destroyUser} className="btn bg-gradient-danger">Delete</button>
+                        <button type="button" className="btn bg-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" onClick={destroyUser} className="btn bg-danger">Delete</button>
                     </div>
                 </Dialog>
 
@@ -138,4 +138,4 @@ export default function Index(props) {
     )
 }
 
-Index.layout = (page) => <Base key={page} children={page} title={"Manage Users"} />
+Index.layout = (page) => <Base key={page} children={page} title={"Manage Tenants"} />
