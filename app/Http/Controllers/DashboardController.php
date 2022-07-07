@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ComplainResource;
 use Illuminate\Http\Request;
+use App\Models\Complain;
 
 class DashboardController extends Controller
 {
@@ -14,6 +16,9 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return inertia('Dashboard');
+        $complains = ComplainResource::collection(Complain::latest()->where('isComplete',0)->paginate(10));
+        return inertia('Dashboard',[
+            'complains' => $complains
+        ]);
     }
 }

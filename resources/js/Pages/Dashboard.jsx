@@ -1,7 +1,16 @@
-import React from 'react'
 import Base from '../Layouts/Base'
+import { Link, useForm } from '@inertiajs/inertia-react';
+import { Inertia } from '@inertiajs/inertia';
 
-export default function Dashboard() {
+export default function Dashboard(props) {
+    const { data: complains, meta } = props.complains;
+    const { put } = useForm();
+
+    const handleStatus = (complain) => {
+          put(route('complains.update', complain.id), {
+           id: complain.id
+        });
+    }
     return (
         <>
             <div className="container-fluid py-4">
@@ -92,62 +101,42 @@ export default function Dashboard() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row"><small>1</small></th>
-                                            <td><small>04.07.2022</small></td>
-                                            <td><small>Otton Mark</small></td>
-                                            <td><small>Broken taps and clogged pipes.</small></td>
-                                            <td><span className="badge rounded-pill bg-light text-danger"><small>pending</small></span></td>
-                                            <td><small><div className="dropdown">
-                                                <button className="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                    <li><a href="#" className="dropdown-item">Mark as Done</a></li>
-                                                    <li><a href="#" className="dropdown-item">Delete Complain.</a></li>
-                                                </ul>
-                                            </div></small></td>
-                                        </tr>
-                                         <tr>
-                                            <th scope="row"><small>2</small></th>
-                                            <td><small>03.07.2022</small></td>
-                                            <td><small>Marcus Bismark</small></td>
-                                            <td><small>Cringy floor</small></td>
-                                            <td><span className="badge rounded-pill bg-light text-success"><small>complete</small></span></td>
-                                            <td><small><div className="dropdown">
-                                                <button className="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                    <li><a href="#" className="dropdown-item">Mark as Done</a></li>
-                                                    <li><a href="#" className="dropdown-item">Delete Complain.</a></li>
-                                                </ul>
-                                            </div></small></td>
-                                        </tr>
-                                         <tr>
-                                            <th scope="row"><small>3</small></th>
-                                            <td><small>06.07.2022</small></td>
-                                            <td><small>Caleb Ishmael</small></td>
-                                            <td><small>Loose door hinges and broken glasses.</small></td>
-                                            <td><span className="badge rounded-pill bg-light text-danger"><small>pending</small></span></td>
-                                            <td><small><div className="dropdown">
-                                                <button className="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                    <li><a href="#" className="dropdown-item">Mark as Done</a></li>
-                                                    <li><a href="#" className="dropdown-item">Delete Complain.</a></li>
-                                                </ul>
-                                            </div></small></td>
-                                        </tr>                              
-                                      
+                                        {complains.map((complain, index) => (
+                                            <tr key={index}>
+                                                <th scope='row'><small>{complain.id}</small></th>
+                                                <td><small>{complain.created_at}</small></td>
+                                                <td><small>{complain.tenant}</small></td>
+                                                <td><small>{complain.complain}</small></td>
+                                                {complain.isComplete ? <td><span className="badge rounded-pill bg-light text-danger"><small>complete</small></span></td>
+                                                    : <td><span className="badge rounded-pill bg-light text-danger"><small>pending</small></span></td>
+                                                }
+                                                <td>
+                                                    <button className="btn dropdown btn-outline-light bg-light text-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Action
+                                                    </button>
+                                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                        <li><button onClick={() => handleStatus(complain)} className="dropdown-item">Mark as Done</button></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                 </table>
+                                <nav aria-label="Page navigation example">
+                                    <ul className="pagination justify-content-center">
+                                        {meta.links.map((link, k) => (
+                                            <li key={k} className="page-item">
+                                                <Link disabled={link.url == null ? true : false} as="button" className={`${link.active && 'bg-info'} ${link.url == null && 'btn bg-gradient-secondary text-white'} page-link`} href={link.url || ''} dangerouslySetInnerHTML={{ __html: link.label }} />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
             </div>
 
         </>

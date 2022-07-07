@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('tenant');
             $table->string('tenant_house');
             $table->text('complain');
+            $table->integer('isComplete')->default(0);
             $table->timestamps();
         });
     }
