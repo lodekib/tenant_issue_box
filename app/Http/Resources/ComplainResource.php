@@ -19,6 +19,7 @@ class ComplainResource extends JsonResource
             'tenant' => $this->tenant,
             'tenant_house' =>$this->tenant_house,
             'complain' =>$this->complain,
+            'isComplete' => $this->isComplete,
             'created_at' =>$this->created_at->format('d.m.Y')
         ];
     }

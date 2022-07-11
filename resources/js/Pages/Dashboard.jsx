@@ -1,16 +1,18 @@
 import Base from '../Layouts/Base'
-import { Link, useForm } from '@inertiajs/inertia-react';
+import { Link } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
+import {  useState } from 'react';
 
 export default function Dashboard(props) {
     const { data: complains, meta } = props.complains;
-    const { put } = useForm();
 
-    const handleStatus = (complain) => {
-          put(route('complains.update', complain.id), {
-           id: complain.id
-        });
+    const handleStatus =  (complain) => {
+        Inertia.post(route('complains.status'), { ...complain });
     }
+
+  
+  
+
     return (
         <>
             <div className="container-fluid py-4">

@@ -9,5 +9,5 @@ class Complain extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tenant','tenant_house','complain'];
+    protected $fillable = ['tenant','tenant_house','complain','isComplete'];
 }
