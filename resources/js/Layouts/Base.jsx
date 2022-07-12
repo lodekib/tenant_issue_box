@@ -17,7 +17,7 @@ export default function Base({children, title}) {
                 <Sidebar />
                 <main className="main-content position-relative border-radius-lg d-flex flex-column min-vh-100 ">
                     <Navbar pageName={ title } />
-                    <Toaster position='top-center' duration='4000'/>
+                    <Toaster position='top-center' duration='1000'/>
                     {children}
                     <Footer/>
                 </main>            

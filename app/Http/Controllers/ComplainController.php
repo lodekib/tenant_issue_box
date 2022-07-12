@@ -34,14 +34,17 @@ class ComplainController extends Controller
     }
     public function status(Request $request)
     {
-        Complain::find($request->id)->first()->update([
+        
+        if(Complain::find($request->id)->first()->update([
             'isComplete' => 1
-        ]);
+        ])){
+            return back()->with([
+                'type' => 'success',
+                'message' => 'Marked complete'
+            ]);
+        }
 
-        return back()->with([
-            'type' => 'success',
-            'message' => 'Marked complete'
-        ]);
+        
     }
 
     public function destroy(Complain $complain)

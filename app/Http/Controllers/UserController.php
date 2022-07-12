@@ -12,7 +12,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = UserResource::collection(User::latest()->paginate(10));
+        $users = UserResource::collection(User::latest()->where('rent','!=',0)->paginate(10));
         return inertia('Users/Index', [
             'users' => $users,
         ]);
@@ -22,7 +22,10 @@ class UserController extends Controller
     {
         $attr = $request->toArray();
 
-        User::create($attr);
+        $done = User::create($attr);
+        if ($done) {
+            $done->assignRole('tenant');
+        }
 
         return back()->with([
             'type' => 'success',

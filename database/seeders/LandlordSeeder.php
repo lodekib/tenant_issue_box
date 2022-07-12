@@ -19,9 +19,11 @@ class LandlordSeeder extends Seeder
        'name' =>'Zainab',
        'email' => 'zainab@gmail.com',
        'username' => 'Zainab',
-       'house_number' => '0000',
+       'house_number' =>0,
        'password' => 'zainab@gmail.com',
-       'rent' => '0'
+       'rent' => 0
       ]);
+
+      $user->assignRole('landlord');
     }
 }

@@ -17,8 +17,14 @@ class DashboardController extends Controller
     public function __invoke(Request $request)
     {
         $complains = ComplainResource::collection(Complain::latest()->where('isComplete',0)->paginate(10));
+        $pending = Complain::where('isComplete',0)->count();
+        $resolved = Complain::where('isComplete',1)->count();
+        $total = $resolved+$pending;
         return inertia('Dashboard',[
-            'complains' => $complains
+            'complains' => $complains,
+            'pending' => $pending,
+            'resolved' => $resolved,
+            'total' => $total
         ]);
     }
 }

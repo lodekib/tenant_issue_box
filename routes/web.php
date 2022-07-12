@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     
     Route::apiResource('users', UserController::class);
     Route::apiResource('complains',ComplainController::class);
-    Route::post('/complain/status',[ComplainController::class,'status'])->name('complains.status');
+    Route::post('complain/status',[ComplainController::class,'status'])->name('complains.status');
 
     Route::get('profile', ProfileController::class)->name('profile');
 });

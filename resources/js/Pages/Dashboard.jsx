@@ -1,17 +1,16 @@
 import Base from '../Layouts/Base'
-import { Link } from '@inertiajs/inertia-react';
+import { Link, usePage } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
-import {  useState } from 'react';
 
 export default function Dashboard(props) {
     const { data: complains, meta } = props.complains;
+    const { auth } = usePage().props;
 
-    const handleStatus =  (complain) => {
+    const handleStatus = (complain) => {
         Inertia.post(route('complains.status'), { ...complain });
+
     }
 
-  
-  
 
     return (
         <>
@@ -25,7 +24,7 @@ export default function Dashboard(props) {
                                         <div className="numbers">
                                             <p className="text-sm mb-0 text-uppercase font-weight-bold">Total Complains</p>
                                             <h5 className="font-weight-bolder">
-                                                30
+                                                {props.total}
                                             </h5>
                                         </div>
                                     </div>
@@ -46,7 +45,7 @@ export default function Dashboard(props) {
                                         <div className="numbers">
                                             <p className="text-sm mb-0 text-uppercase font-weight-bold">Complains Resolved</p>
                                             <h5 className="font-weight-bolder">
-                                                23
+                                                {props.resolved}
                                             </h5>
                                         </div>
                                     </div>
@@ -67,7 +66,7 @@ export default function Dashboard(props) {
                                         <div className="numbers">
                                             <p className="text-sm mb-0 text-uppercase font-weight-bold">Pending Resolutions</p>
                                             <h5 className="font-weight-bolder">
-                                                3
+                                                {props.pending}
                                             </h5>
 
                                         </div>
@@ -94,32 +93,35 @@ export default function Dashboard(props) {
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col"><small>id</small></th>
                                             <th scope="col"><small>Date</small></th>
                                             <th scope="col"><small>Tenant</small></th>
                                             <th scope="col"><small>Complain</small></th>
                                             <th scope="col"><small>Status</small></th>
-                                            <th scope="col"><small></small></th>
+                                            {auth.user.house_number != 0 ?
+                                                <th scope="col"><small></small></th> : <p></p>
+}
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {complains.map((complain, index) => (
                                             <tr key={index}>
-                                                <th scope='row'><small>{complain.id}</small></th>
                                                 <td><small>{complain.created_at}</small></td>
                                                 <td><small>{complain.tenant}</small></td>
                                                 <td><small>{complain.complain}</small></td>
                                                 {complain.isComplete ? <td><span className="badge rounded-pill bg-light text-danger"><small>complete</small></span></td>
                                                     : <td><span className="badge rounded-pill bg-light text-danger"><small>pending</small></span></td>
                                                 }
-                                                <td>
-                                                    <button className="btn dropdown btn-outline-light bg-light text-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Action
-                                                    </button>
-                                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                                        <li><button onClick={() => handleStatus(complain)} className="dropdown-item">Mark as Done</button></li>
-                                                    </ul>
-                                                </td>
+                                                {auth.user.house_number != 0 ?
+                                                    <td>
+                                                        <button className="btn dropdown btn-outline-light bg-light text-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            Action
+                                                        </button>
+                                                        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                            <li><button onClick={() => handleStatus(complain)} className="dropdown-item">Mark as Done</button></li>
+                                                        </ul>
+                                                    </td>
+                                                    : <td></td>}
+
                                             </tr>
                                         ))}
                                     </tbody>
