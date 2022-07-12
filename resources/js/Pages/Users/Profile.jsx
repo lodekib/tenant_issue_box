@@ -51,7 +51,7 @@ export default function Profile(props) {
                                 <div className="card-header pb-0">
                                     <div className="d-flex align-items-center">
                                     <p className="mb-0">Edit Profile</p>
-                                    <button type='submit' className="btn btn-primary btn-sm ms-auto">Save</button>
+                                    <button type='submit' className="btn bg-dark btn-sm ms-auto text-success">Save</button>
                                     </div>
                                 </div>
                                 <div className="card-body">                                

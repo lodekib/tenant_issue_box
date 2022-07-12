@@ -27,8 +27,8 @@ export default function CreateComplain({ close }) {
 
             </div>
             <div className="modal-footer">
-                <button type="button" className="btn bg-secondary text-light" data-bs-dismiss="modal">Close</button>
-                <button type="submit" className="btn bg-primary text-light">Submit</button>
+                <button type="button" className="btn bg-secondary text-success" data-bs-dismiss="modal">Close</button>
+                <button type="submit" className="btn bg-dark text-success">Submit</button>
             </div>
         </form>
     </>

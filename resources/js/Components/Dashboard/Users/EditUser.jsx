@@ -61,8 +61,8 @@ export default function EditUser({close, model}) {
                         </div>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" className="btn bg-gradient-primary">Update</button>
+                    <button type="button" className="btn bg-secondary text-success" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" className="btn bg-dark text-success">Update</button>
                 </div>
             </form>
         </>

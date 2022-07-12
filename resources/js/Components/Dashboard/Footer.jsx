@@ -16,7 +16,7 @@ export default function Footer() {
                         <div className="col-lg-6">
                         <ul className="nav nav-footer justify-content-center justify-content-lg-end">
                             <li className="nav-item">
-                            <a href="#" className="nav-link text-muted">TenantCare</a>
+                            <a href="#" className="nav-link text-muted">Acacia TenantCare</a>
                             </li>
                         </ul>
                         </div>

@@ -5366,12 +5366,12 @@ function CreateComplain(_ref) {
         className: "modal-footer",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
           type: "button",
-          className: "btn bg-secondary text-light",
+          className: "btn bg-secondary text-success",
           "data-bs-dismiss": "modal",
           children: "Close"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
           type: "submit",
-          className: "btn bg-primary text-light",
+          className: "btn bg-dark text-success",
           children: "Submit"
         })]
       })]
@@ -5483,7 +5483,7 @@ function Footer() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
                   href: "#",
                   className: "nav-link text-muted",
-                  children: "TenantCare"
+                  children: "Acacia TenantCare"
                 })
               })
             })
@@ -5604,7 +5604,7 @@ function Sidebar() {
         target: "_blank",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
           className: "ms-1 font-weight-bold",
-          children: " TenantCare"
+          children: " Acacia TenantCare"
         })
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("hr", {
@@ -5897,12 +5897,12 @@ function CreateUser(_ref) {
         className: "modal-footer",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "button",
-          className: "btn bg-secondary text-light",
+          className: "btn bg-secondary text-success",
           "data-bs-dismiss": "modal",
           children: "Close"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "submit",
-          className: "btn bg-primary text-light",
+          className: "btn bg-dark text-success",
           children: "Save"
         })]
       })]
@@ -6091,12 +6091,12 @@ function EditUser(_ref) {
         className: "modal-footer",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "button",
-          className: "btn bg-gradient-secondary",
+          className: "btn bg-secondary text-success",
           "data-bs-dismiss": "modal",
           children: "Close"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
           type: "submit",
-          className: "btn bg-gradient-primary",
+          className: "btn bg-dark text-success",
           children: "Update"
         })]
       })]
@@ -6126,13 +6126,12 @@ __webpack_require__.r(__webpack_exports__);
 
 function Navbar() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
-    className: "navbar navbar-expand-lg  bg-light mb-4",
+    className: "navbar navbar-expand-lg bg-secondary  mb-4",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         className: "navbar-brand text-dark",
-        href: "#",
-        children: "Logo"
+        src: "img/logo.svg"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
         className: "navbar-toggler",
         type: "button",
@@ -6148,15 +6147,7 @@ function Navbar() {
         className: "collapse navbar-collapse",
         id: "navbarSupportedContent",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
-          className: "navbar-nav me-auto mb-2 mb-lg-0",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
-            className: "nav-item",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-              className: "nav-link text-dark",
-              href: route('home'),
-              children: "Home"
-            })
-          })
+          className: "navbar-nav me-auto mb-2 mb-lg-0"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
           className: "navbar-nav mb-2 mb-lg-0",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
@@ -6499,19 +6490,9 @@ function Login(_ref) {
                       className: "text-center",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
                         type: "submit",
-                        className: "btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0",
+                        className: "btn btn-lg bg-dark btn-lg w-100 mt-4 mb-0 text-success",
                         children: "Sign in"
                       })
-                    })]
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  className: "card-footer text-center pt-0 px-lg-2 px-1",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-                    className: "mb-4 text-sm mx-auto",
-                    children: ["Don't have an account? ", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                      href: route('register'),
-                      className: "text-primary text-gradient font-weight-bold",
-                      children: "Sign up"
                     })]
                   })
                 })]
@@ -6520,7 +6501,7 @@ function Login(_ref) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              className: "position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden",
+              className: "position-relative bg-dark-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden",
               style: {
                 backgroundImage: 'url("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg")',
                 backgroundSize: 'cover'
@@ -6529,10 +6510,10 @@ function Login(_ref) {
                 className: "mask bg-gradient-primary opacity-7"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
                 className: "mt-5 text-white font-weight-bolder position-relative",
-                children: "TenantCare"
+                children: "Acacia TenantCare"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                 className: "text-white position-relative",
-                children: "Coonect with your Landlord"
+                children: "Connect with your Landlord"
               })]
             })
           })]
@@ -6924,7 +6905,7 @@ function ComplainIndex(props) {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("button", {
                     type: "button",
                     onClick: addDialogHandler,
-                    className: "btn bg-primary btn-block mb-3 text-light",
+                    className: "btn bg-dark btn-block mb-3 text-success",
                     "data-bs-toggle": "modal",
                     "data-bs-target": "#exampleModalMessage",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
@@ -6956,6 +6937,9 @@ function ComplainIndex(props) {
                         className: "text-uppercase text-secondary text-xxs font-weight-bolder text-left opacity-7 ps-2",
                         children: "Complain"
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
+                        className: "text-uppercase text-secondary text-xxs font-weight-bolder text-left opacity-7 ps-2",
+                        children: "Status"
+                      }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("th", {
                         className: "text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2",
                         children: "Actions"
                       })]
@@ -7020,6 +7004,14 @@ function ComplainIndex(props) {
                             })
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
+                          className: "align-middle ",
+                          width: "10%",
+                          children: complain.isComplete ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
+                            "class": "fas fa-check-circle text-success"
+                          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
+                            "class": "fas fa-exclamation-circle text-danger"
+                          })
+                        }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("td", {
                           className: "align-middle text-center",
                           width: "10%",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
@@ -7028,7 +7020,7 @@ function ComplainIndex(props) {
                               onClick: function onClick() {
                                 return openDestroyDialog(complain);
                               },
-                              className: "btn btn-youtube btn-icon-only",
+                              className: "btn  btn-icon-only",
                               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                                 className: "btn-inner--icon",
                                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
@@ -7056,7 +7048,7 @@ function ComplainIndex(props) {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
                 disabled: link.url == null ? true : false,
                 as: "button",
-                className: "".concat(link.active && 'bg-info', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
+                className: "".concat(link.active && 'bg-dark text-success', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
                 href: link.url || '',
                 dangerouslySetInnerHTML: {
                   __html: link.label
@@ -7333,7 +7325,7 @@ function Dashboard(props) {
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
                         disabled: link.url == null ? true : false,
                         as: "button",
-                        className: "".concat(link.active && 'bg-info', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
+                        className: "".concat(link.active && 'bg-dark text-success', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
                         href: link.url || '',
                         dangerouslySetInnerHTML: {
                           __html: link.label
@@ -7373,27 +7365,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Layouts/Guest */ "./resources/js/Layouts/Guest.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "card",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "card-body"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "bg-secondary",
+      style: {
+        left: "50%",
+        top: "50%",
+        position: "absolute",
+        transform: "translate(-50%,-50%)",
+        color: "#fff",
+        padding: "40px",
+        borderRadius: "10px",
+        cursor: "pointer"
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
+        children: "Acacia TenantCare"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "btn bg-dark btn-block mt-4 w-100",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+          className: "nav-link text-success",
+          href: route('login'),
+          children: "LOGIN"
         })
-      })
+      })]
     })
   });
 }
 
 Home.layout = function (page) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Layouts_Guest__WEBPACK_IMPORTED_MODULE_1__["default"], {
     children: page,
     title: "Home"
   });
@@ -7445,6 +7454,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Index(props) {
+  var auth = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.auth;
   var _props$users = props.users,
       users = _props$users.data,
       links = _props$users.links,
@@ -7541,12 +7551,12 @@ function Index(props) {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h6", {
                     children: "Tenants"
                   })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                   className: "col-md-6 d-flex justify-content-end",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
                     onClick: addDialogHandler,
                     type: "button",
-                    className: "btn bg-gradient-success btn-block mb-3",
+                    className: "btn bg-dark text-success btn-block mb-3",
                     "data-bs-toggle": "modal",
                     "data-bs-target": "#exampleModalMessage",
                     children: "New Tenant"
@@ -7578,10 +7588,10 @@ function Index(props) {
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                         className: "text-uppercase text-secondary text-xxs font-weight-bolder text-left opacity-7 ps-2",
                         children: "House"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
+                      }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                         className: "text-uppercase text-secondary text-xxs font-weight-bolder text-left opacity-7 ps-2",
                         children: "Rent"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
+                      }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("th", {
                         className: "text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2",
                         children: "Actions"
                       })]
@@ -7635,7 +7645,7 @@ function Index(props) {
                               })
                             })
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+                        }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
                           className: "align-middle text-left",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
                             className: "d-flex align-items-center text-left",
@@ -7646,7 +7656,7 @@ function Index(props) {
                               })
                             })
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
+                        }), auth.user.rent != 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("td", {
                           className: "align-middle text-center",
                           width: "10%",
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
@@ -7697,7 +7707,7 @@ function Index(props) {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
                 disabled: link.url == null ? true : false,
                 as: "button",
-                className: "".concat(link.active && 'bg-info', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
+                className: "".concat(link.active && 'bg-dark text-success', " ").concat(link.url == null && 'btn bg-gradient-secondary text-white', " page-link"),
                 href: link.url || '',
                 dangerouslySetInnerHTML: {
                   __html: link.label
@@ -7827,7 +7837,7 @@ function Profile(props) {
                       children: "Edit Profile"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
                       type: "submit",
-                      className: "btn btn-primary btn-sm ms-auto",
+                      className: "btn bg-dark btn-sm ms-auto text-success",
                       children: "Save"
                     })]
                   })

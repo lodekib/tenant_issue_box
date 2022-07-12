@@ -63,24 +63,18 @@ export default function Login({ errors }) {
                                                 <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
                                             </div>
                                             <div className="text-center">
-                                                <button type="submit" className="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
+                                                <button type="submit" className="btn btn-lg bg-dark btn-lg w-100 mt-4 mb-0 text-success">Sign in</button>
                                             </div>
                                         </form>
-                                    </div>
-                                    <div className="card-footer text-center pt-0 px-lg-2 px-1">
-                                        <p className="mb-4 text-sm mx-auto">
-                                            Don't have an account? {' '}
-                                            <Link href={route('register')} className="text-primary text-gradient font-weight-bold">Sign up</Link>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-                        <div className="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style={{backgroundImage: 'url("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg")', backgroundSize: 'cover'}}>
+                        <div className="position-relative bg-dark-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style={{backgroundImage: 'url("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg")', backgroundSize: 'cover'}}>
                             <span className="mask bg-gradient-primary opacity-7" />
-                            <h4 className="mt-5 text-white font-weight-bolder position-relative">TenantCare</h4>
-                            <p className="text-white position-relative">Coonect with your Landlord</p>
+                            <h4 className="mt-5 text-white font-weight-bolder position-relative">Acacia TenantCare</h4>
+                            <p className="text-white position-relative">Connect with your Landlord</p>
                         </div>
                         </div>
                     </div>

@@ -59,8 +59,8 @@ export default function CreateUser({close}) {
                         </div>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn bg-secondary text-light" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" className="btn bg-primary text-light">Save</button>
+                    <button type="button" className="btn bg-secondary text-success" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" className="btn bg-dark text-success">Save</button>
                 </div>
             </form>
         </>
